@@ -7,10 +7,10 @@ Sample code modified from
 http://www.raspberrypi.org/forums/viewtopic.php?p=276780#p276780
 """
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.IN)
+GPIO.setup(24, GPIO.IN)
 prev_input = 0
 while True:
-    input = GPIO.input(17)
+    input = GPIO.input(24)
     if ((not prev_input) and input):
         shutdown(25) # Shutdown power after 25 seconds
     prev_input = input
